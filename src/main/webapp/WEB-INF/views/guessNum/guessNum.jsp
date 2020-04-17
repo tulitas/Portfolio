@@ -78,7 +78,11 @@
         </ul>
     </nav>
     <article>
-
+        <form action="/guessNum" method="post">
+            <label for="digit" id="forLable">Enter digit from 1 up to 100</label><br>
+            <textarea name="digit" id="digit" type="text" class="area" ></textarea><br>
+            <input type="submit" value="Submit" class="button">
+        </form>
     </article>
 </section>
 <footer>

@@ -25,7 +25,6 @@ public class SiteController {
 
     @RequestMapping(value = "/guessNum")
     public ModelAndView GuessNum() {
-        System.out.println("GuessNum sitecontroller");
         return new ModelAndView("guessNum/guessNum");
     }
 }
