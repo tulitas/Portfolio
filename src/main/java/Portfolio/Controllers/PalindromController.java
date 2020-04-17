@@ -1,6 +1,6 @@
-package SpringBootRastService.Controllers;
+package Portfolio.Controllers;
 
-import SpringBootRastService.Applications.Palindrome.PalindromCheck;
+import Portfolio.Applications.Palindrome.PalindromCheck;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

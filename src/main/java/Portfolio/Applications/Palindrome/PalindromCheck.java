@@ -1,4 +1,4 @@
-package SpringBootRastService.Applications.Palindrome;
+package Portfolio.Applications.Palindrome;
 
 
 
