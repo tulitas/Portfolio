@@ -80,7 +80,8 @@
     <article>
         <form action="/guessNum" method="post">
             <label for="digit" id="forLable">Enter digit from 1 up to 100</label><br>
-            <textarea name="digit" id="digit" type="text" class="area" ></textarea><br>
+
+            <input type="text" id="digit" name="digit" pattern="[0-9]{1-3}" title="Only digits">
             <input type="submit" value="Submit" class="button">
         </form>
     </article>

@@ -27,4 +27,9 @@ public class SiteController {
     public ModelAndView GuessNum() {
         return new ModelAndView("guessNum/guessNum");
     }
+
+    @RequestMapping(value = "/askPlayer")
+    public ModelAndView askPlayer() {
+        return new ModelAndView("guessNum/askPlayer");
+    }
 }

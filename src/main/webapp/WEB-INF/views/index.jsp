@@ -10,11 +10,11 @@
 <style>
 
 
-    .bmenu{
+    .bmenu {
         padding: 50px 0px;
         margin: 0 auto;
         position: relative;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0, 0, 0, 0.7);
         width: 500px;
         height: 400px;
         -webkit-border-radius: 250px;
@@ -26,15 +26,18 @@
         -ms-transition: background-color 0.5s ease-in-out;
         transition: background-color 0.5s ease-in-out;
     }
-    .bmenu:hover{
-        background: rgba(0,0,0,0.2);
+
+    .bmenu:hover {
+        background: rgba(0, 0, 0, 0.2);
     }
-    .bmenu li{
+
+    .bmenu li {
         font-size: 40px;
         display: block;
         line-height: 66px;
     }
-    .bmenu li a{
+
+    .bmenu li a {
         white-space: nowrap;
         color: transparent;
         display: block;
@@ -53,22 +56,25 @@
         -ms-transition: all 0.4s linear;
         transition: all 0.4s linear;
     }
-    .bmenu:hover li a{
+
+    .bmenu:hover li a {
         text-shadow: 0px 0px 10px #fff;
     }
-    .bmenu li a:hover{
+
+    .bmenu li a:hover {
         text-shadow: none;
         color: #fff;
-        background: rgba(129,6,29,0.8);
+        background: rgba(129, 6, 29, 0.8);
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-    body{
+
+    body {
         background: url("https://cdn.iz.ru/sites/default/files/styles/900x506/public/news-2019-08/TASS_28367297.jpg?itok=0yvFJ3kK");
-        background-size:100%;
+        background-size: 100%;
     }
 
 
@@ -82,10 +88,10 @@
 <ul class="bmenu">
     <li><a href="/ticTacToe">Tic Tac Toe</a></li>
     <li><a href="/palindrom">Palindrom</a></li>
-    <li><a href="/guessNum">Guess Num</a></li>
-    <li><a href="#">Web Design</a></li>
-    <li><a href="#">Personal Projects</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="/askPlayer">Guess Num</a></li>
+    <li><a href="#">zzz</a></li>
+    <li><a href="#">xxx</a></li>
+    <li><a href="#">ccc</a></li>
 </ul>
 
 </body>
