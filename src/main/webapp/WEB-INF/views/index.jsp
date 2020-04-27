@@ -86,9 +86,9 @@
 <body>
 
 <ul class="bmenu">
-    <li><a href="/ticTacToe">Tic Tac Toe</a></li>
-    <li><a href="/palindrom">Palindrom</a></li>
-    <li><a href="/askPlayer">Guess Num</a></li>
+    <li><a href="${pageContext.request.contextPath}/ticTacToe">Tic Tac Toe</a></li>
+    <li><a href="${pageContext.request.contextPath}/palindrom">Palindrom</a></li>
+    <li><a href="${pageContext.request.contextPath}/askPlayer">Guess Num</a></li>
     <li><a href="#">zzz</a></li>
     <li><a href="#">xxx</a></li>
     <li><a href="#">ccc</a></li>

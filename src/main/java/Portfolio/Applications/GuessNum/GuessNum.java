@@ -12,45 +12,64 @@ public class GuessNum {
     private static Random random = new Random();
     private int tryNum;
     private String ss;
-    int userScore = 0;
-    int myScore = 0;
-    boolean userLost = true;
-private GuessNumController guessNumController = new GuessNumController();
+    private int userScore = 0;
+    private int myScore = 0;
+    private boolean userLost = true;
+    private GuessNumController guessNumController = new GuessNumController();
+    private int userNum = 0;
 
-    public void chekNum() {
-
-
+    public static void runMyNum(int digit) {
+        do {
 
 
             int myNum = random.nextInt(100) + 1;
             System.out.println(myNum);
-            for (int i = 0; i < 10; i++) {
+            for (int i = 1; i < 10; i++) {
+                if (myNum > digit) {
+                    System.out.println("Mojo bolse");
 
-                int userNum = 25;
-                System.out.println("Попытка #" + i);
-                System.out.println("user num = " + userNum + "!!!");
-                tryNum = i;
-
-                long t1 = System.currentTimeMillis();
-                if (myNum == userNum) {
-                    userScore += 1;
-
-                    System.out.println("You are WINER!!!");
-                    long t2 = System.currentTimeMillis();
-                    long t = t2 - t1;
-                    break;
-                } else if (myNum < userNum) {
-                    System.out.println(" Моё число < ");
+                } else if (myNum < digit) {
+                    System.out.println("mojo mense");
 
                 } else {
-                    System.out.println(" Моё число > ");
-
+                    System.out.println("you lose");
                 }
+                break;
+            }
+
+        } while (digit == 1000);
+    }
+
+    public void chekNum() {
+
+
+        int myNum = random.nextInt(100) + 1;
+        System.out.println(myNum);
+        for (int i = 1; i < 10; i++) {
+            System.out.println(userNum);
+            System.out.println("Попытка #" + i);
+            System.out.println("user num = " + userNum + "!!!");
+            tryNum = i;
+
+            if (myNum == userNum) {
+                userScore += 1;
+
+                System.out.println("You are WINER!!!");
+
+
+                break;
+            } else if (myNum < userNum) {
+                System.out.println(" Моё число < ");
+
+            } else {
+                System.out.println(" Моё число > ");
 
             }
-            if (userLost) {
-                myScore += 1;
-            }
+
+        }
+        if (userLost) {
+            myScore += 1;
+        }
 
     }
 

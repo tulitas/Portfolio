@@ -1,15 +1,11 @@
 package Portfolio.Controllers;
 
-import Portfolio.Applications.GuessNum.GuessNum;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
-import java.util.InputMismatchException;
-import java.util.Random;
+
 
 @Controller
 @RequestMapping(value = "/")
@@ -21,13 +17,25 @@ public class GuessNumController {
     public String takeDigit(int digit, Model model) {
 
         return "guessNum/guessNum";
+
     }
 
-    @RequestMapping(value = "askPlayer", method = RequestMethod.POST)
-    public String askPlayer() {
+//    @RequestMapping(value = "askPlayer", method = RequestMethod.GET)
+//    public String askPlayer() {
+//
+//
+//        return "guessNum/askPlayerName";
+//    }
 
+    @RequestMapping(value = "askPlayerName", method = RequestMethod.POST)
+    public String askPlayerName(String name, Model model) {
+        System.out.println("Hi: " + name);
 
         return "guessNum/guessNum";
     }
+
+
+
+
 
 }
