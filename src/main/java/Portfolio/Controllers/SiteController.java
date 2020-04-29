@@ -37,4 +37,6 @@ public class SiteController {
     public ModelAndView askPlayerName() {
         return new ModelAndView("guessNum/askPlayerName");
     }
+
+
 }

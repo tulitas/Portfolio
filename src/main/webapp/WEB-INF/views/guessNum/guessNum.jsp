@@ -98,13 +98,13 @@
             padding: 12px 40px;
             margin: 10px 20px;
             border-radius: 30px;
-            background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
+            background-image: linear-gradient(45deg, #d7152b 0%, #33d9de 50%, #002878 100%);
             background-position: 100% 0;
             background-size: 200% 200%;
             font-family: 'Montserrat', sans-serif;
             font-size: 24px;
             font-weight: 300;
-            color: white;
+            color: #b6b6ff;
             box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
             transition: .5s;
             position: absolute;
@@ -115,6 +115,30 @@
         .button:hover {
             box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
             background-position: 0 0;
+        }
+
+        #forLable {
+            font-size: 20px;
+            color: #949494;
+            font-family: 'DejaVu Sans Mono', monospace;
+        }
+
+        .helloPlayer {
+            text-shadow: 0 2px 10px rgb(123, 8, 21);
+            font-family: "DejaVu Sans Mono", monospace;
+            font-size: 28px;
+            color: gray;
+        }
+        footer {
+            position: absolute;
+            bottom: 50%;
+            left: 20%;
+            height: 100px;
+            width: 300px;
+        }
+        .forFooter {
+            color: #ff0015;
+            font-size: 25px;
         }
     </style>
     <title>Guess Num</title>
@@ -139,8 +163,11 @@
         </ul>
     </nav>
     <article>
+        <div class="helloPlayer">
+            Hello <c:out value="${playerName}"/>
+            Your digit is <c:out value="${palyerDigit}"/>
+        </div>
 
-        Hello <c:out value="${playerName}"/>
         <form action="/guessNum" method="post">
             <label for="digit" id="forLable">Enter digit from 1 up to 100</label><br>
 
@@ -153,9 +180,13 @@
         </form>
 
     </article>
-</section>
-<footer>
+    <footer class="footer">
+        <div class="forFooter">
+            This is your friends and they are sleeping
+        </div>
 
-</footer>
+    </footer>
+</section>
+
 </body>
 </html>
