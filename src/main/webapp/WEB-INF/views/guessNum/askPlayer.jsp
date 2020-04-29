@@ -109,9 +109,8 @@
     </article>
 </section>
 <aside>
-    <form action="/askPlayerName">
-        <label for="Yes">If you whant play press YES</label><br>
-        <input type="submit" value="Yes" class="button" name="Yes" id="Yes">
+    <form action="${pageContext.request.contextPath}/askPlayerName">
+        <input type="submit" value="Yes" class="button" id="Yes">
     </form>
     <form action="/">
         <input value="No" type="submit" name="No" id="No">

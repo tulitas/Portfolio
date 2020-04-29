@@ -123,7 +123,7 @@
     <nav id="navbar">
         <ul>
             <li><a href="/">Top menu</a></li>
-            <li><a href="/guessNum">Guess Num</a></li>
+            <li><a href="/askPlayer">Guess Num</a></li>
             <li><a href="#">ссс</a></li>
         </ul>
     </nav>

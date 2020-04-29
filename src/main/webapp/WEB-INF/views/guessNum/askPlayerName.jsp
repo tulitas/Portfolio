@@ -34,7 +34,7 @@
     </h1>
 </header>
 <article>
-    <form action="/askPlayerName" method="post">
+    <form action="${pageContext.request.contextPath}/askPlayerName" method="post">
         <label for="name" style="color: #666666">Enter name</label>
         <input type="text" id="name" name="name" pattern="[az-AZ]" title="Only letters">
         <input type="submit" value="Submit" class="button">

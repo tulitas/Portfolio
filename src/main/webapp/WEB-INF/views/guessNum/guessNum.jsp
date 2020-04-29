@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: SergejK
@@ -7,64 +8,124 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<style>
-    #div1 {
-        font-size: 50px;
-        color: #3333FF;
-        text-align: center;
-    }
-    nav {
-        float: left;
-        width: 10%;
-        height: 100px; /* only for demonstration, should be removed */
-        background: #ccc;
-        padding: 20px;
-    }
-
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    section:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    #navbar {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        width: 200px;
-    }
-
-    #navbar li {
-        border-left: 10px solid #666;
-        border-bottom: 1px solid #666;
-    }
-
-    #navbar a {
-        background-color: #949494;
-        color: #fff;
-        padding: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        border-left: 5px solid #33ADFF;
-        display: block;
-    }
-
-    #navbar a:hover {
-        background-color: #666;
-        border-left: 5px solid #3333FF;
-    }
-</style>
 <head>
+    <style>
+
+
+        body {
+            background: url("https://edge.alluremedia.com.au/m/g/2017/10/jigsaw_movie.jpg");
+            background-size: 100%;
+
+        }
+
+
+        nav {
+            float: left;
+            width: 10%;
+            height: 100px; /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #navbar {
+            position: absolute;
+            left: 1%;
+            top: 15%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: 200px;
+        }
+
+        #navbar li {
+            border-left: 10px solid #666;
+            border-bottom: 1px solid #666;
+        }
+
+        #navbar a {
+            background-color: #949494;
+            color: #fff;
+            padding: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border-left: 5px solid #33ADFF;
+            display: block;
+        }
+
+        #navbar a:hover {
+            background-color: #666;
+            border-left: 5px solid #3333FF;
+        }
+
+        article {
+
+            position: absolute;
+            left: 20%;
+            top: 15%;
+            width: 40%;
+            height: 40%;
+
+        }
+
+        #digit {
+            width: 80px;
+            height: 50px;
+            background-color: #949494;
+            font-size: 40px;
+            font-family: "Comic Sans MS";
+            color: #ff0015;
+            position: absolute;
+            left: 60%;
+            top: 10%;
+            border-radius: 8px;
+        }
+
+        .button {
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+            padding: 12px 40px;
+            margin: 10px 20px;
+            border-radius: 30px;
+            background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
+            background-position: 100% 0;
+            background-size: 200% 200%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            color: white;
+            box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
+            transition: .5s;
+            position: absolute;
+            left: 51%;
+            top: 25%;
+        }
+
+        .button:hover {
+            box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+            background-position: 0 0;
+        }
+    </style>
     <title>Guess Num</title>
 </head>
+
+
 <body>
 <header>
-    <div id="div1">
-        Guess Num
+    <div>
+
+
     </div>
 
 </header>
@@ -78,12 +139,19 @@
         </ul>
     </nav>
     <article>
+
+        Hello <c:out value="${playerName}"/>
         <form action="/guessNum" method="post">
             <label for="digit" id="forLable">Enter digit from 1 up to 100</label><br>
 
             <input type="text" id="digit" name="digit" pattern="[0-9]{1-3}" title="Only digits">
-            <input type="submit" value="Submit" class="button">
+            <div class="button-parent">
+                <div>
+                    <input type="submit" value="Submit" class="button">
+                </div>
+            </div>
         </form>
+
     </article>
 </section>
 <footer>
