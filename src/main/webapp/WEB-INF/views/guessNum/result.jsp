@@ -1,3 +1,16 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: SergejK
+  Date: 5/1/2020
+  Time: 7:31 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -141,7 +154,7 @@
             font-size: 25px;
         }
     </style>
-    <title>Guess Num</title>
+    <title>Result</title>
 </head>
 
 
@@ -164,19 +177,10 @@
     </nav>
     <article>
         <div class="helloPlayer">
-            Hello <c:out value="${playerName}"/>
+            Well, <c:out value="${result}"/>
         </div>
 
-        <form action="/guessNum" method="post">
-            <label for="digit" id="forLable">Enter digit from 1 up to 3</label><br>
 
-            <input type="text" id="digit" name="digit" pattern="[1-3]{1}" title="Only digits">
-            <div class="button-parent">
-                <div>
-                    <input type="submit" value="Submit" class="button">
-                </div>
-            </div>
-        </form>
 
     </article>
     <footer class="footer">
@@ -187,5 +191,7 @@
     </footer>
 </section>
 
+</body>
+</html>
 </body>
 </html>

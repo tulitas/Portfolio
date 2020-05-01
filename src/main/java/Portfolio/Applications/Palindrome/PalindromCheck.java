@@ -15,12 +15,10 @@ public  class PalindromCheck {
 
     private boolean recursivePalindrome(String text, int forward, int backward) {
         if (forward == backward) {
-            System.out.println("Palindrome");
             setResultPalindrom("Palindrome");
             return true;
         }
         if ((text.charAt(forward)) != (text.charAt(backward))) {
-            System.out.println("Not Palindrome");
             setResultPalindrom("Not palindrome");
             return false;
         }

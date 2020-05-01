@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: SergejK
@@ -109,11 +110,11 @@
     </article>
 </section>
 <aside>
-    <form action="${pageContext.request.contextPath}/askPlayerName">
-        <input type="submit" value="Yes" class="button" id="Yes">
+    <form action="<c:url value="/askPlayer"/>" method="post">
+        <input value="Yes" type="submit" name="ask" class="button" id="Yes">
     </form>
-    <form action="/">
-        <input value="No" type="submit" name="No" id="No">
+    <form action="<c:url value="/"/>">
+        <input value="No" type="submit" name="ask" id="No" class="button">
     </form>
 </aside>
 </body>
