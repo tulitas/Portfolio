@@ -14,7 +14,7 @@ public class ChekNum {
         myNum = random.nextInt(3) + 1;
 
         if (myNum == digit) {
-             setAskResult("Good! You are winner! You can go, for the time being. ");
+            setAskResult("Good! You are winner! You can go, for the time being. ");
         } else if (myNum < digit) {
             setAskResult("My num is less! Sit down next to friends. ");
         } else {
@@ -26,7 +26,7 @@ public class ChekNum {
         return askResult;
     }
 
-    private void setAskResult(String askResult) {
+    public void setAskResult(String askResult) {
         this.askResult = askResult;
     }
 }
