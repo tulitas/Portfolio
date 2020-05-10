@@ -31,10 +31,9 @@ public class JobformServiceImpl implements JobformService {
         return jobformRepository.findById(id);
     }
 
-    @Override
-    public void delete(Jobform jobform) {
 
-    }
+
+
 
     @Override
     public Object findAll() {
@@ -44,5 +43,10 @@ public class JobformServiceImpl implements JobformService {
     @Override
     public String getJobsperdays(String date3) {
         return null;
+    }
+
+    @Override
+    public void delete(long id) {
+
     }
 }

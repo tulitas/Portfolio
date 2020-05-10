@@ -8,4 +8,5 @@ import java.util.List;
 public interface JobformRepository extends CrudRepository<Jobform, Long> {
 
     List<Jobform> findById(long id);
+
 }

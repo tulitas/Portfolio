@@ -111,6 +111,8 @@
                     <td>${jobforms.name}</td>
                     <td>${jobforms.surname}</td>
                     <td><a href="/edit${jobforms.id}">Edit</a></td>
+                    <td><a href="/delete${jobforms.id}">Delete</a></td>
+
                 </tr>
                 </tbody>
             </table>

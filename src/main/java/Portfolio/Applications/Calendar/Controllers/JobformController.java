@@ -45,6 +45,12 @@ public class JobformController {
         return "calendar/add-new";
     }
 
+    @RequestMapping(value = "/delete{id}", method = RequestMethod.GET)
+    public String deleteJobform(@PathVariable("id") long id) {
+        jobformService.delete(id);
+        System.out.println("deleted " + id);
+        return "calendar/calendar";
+    }
 //    @PostMapping("/update/{id}")
 //    public String updateUser(@PathVariable("id") long id, @Valid Jobform jobform,
 //                             BindingResult result, Model model) {

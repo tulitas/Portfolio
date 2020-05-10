@@ -12,9 +12,10 @@ public interface JobformService {
     List<Jobform> findById(long id);
 
 
-    void delete(Jobform jobform);
 
     Object findAll();
 
     String getJobsperdays(String date3);
+
+    void delete(long id);
 }
