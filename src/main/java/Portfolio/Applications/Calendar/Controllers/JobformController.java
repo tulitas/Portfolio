@@ -30,24 +30,16 @@ public class JobformController {
         return "calendar/added";
     }
 
-    @GetMapping("/edit{id}")
+    @RequestMapping(value = "/edit{id}", method = RequestMethod.GET)
     public String showUpdateForm(@PathVariable("id") long id, Model model) {
         System.out.println("edit");
         List<Jobform> jobFormList = jobformService.findById(id);
-//        System.out.println("update");
-//        Jobform jobform = (Jobform) jobformService.findById(id)
-//                .orElseThrow(() -> new IllegalArgumentException("Invalid user ID: "));
         model.addAttribute("jobform", jobFormList);
         return "calendar/edit";
     }
-    @RequestMapping(value = "/options/edit{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/edit{id}", method = RequestMethod.POST)
     public String updateUser(@PathVariable("id") long id, @Valid Jobform jobForm, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            jobForm.setId(id);
-
-            return "calendar/add-new";
-        }
-
+        System.out.println("33");
         jobformService.addNewJobform(jobForm);
         model.addAttribute("users", jobformService.findById(id));
         return "calendar/add-new";
