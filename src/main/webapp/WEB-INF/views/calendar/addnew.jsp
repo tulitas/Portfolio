@@ -1,12 +1,11 @@
 <!--
 Created by IntelliJ IDEA.
 User: SergejK
-Date: 12/11/2019
-Time: 11:36 AM
+Date: 12/9/2019
+Time: 8:09 PM
 To change this template use File | Settings | File Templates.
 -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -175,12 +174,27 @@ To change this template use File | Settings | File Templates.
             margin-left: 280px;
             padding-bottom: 50px;
         }
-    </style>
 
-    <title>Edit</title></head>
+
+        /*,.*/
+
+
+    </style>
+    <title>Sherlog Calendar</title></head>
 <body>
 
-<h1>Edit Page</h1>
+
+<div id="wrapper">
+    <header>
+        <img src="https://www.sherloglatvia.com/wp-content/uploads/2016/06/logo.png" alt="sherlog" width="90"
+             height="50"/>
+
+
+    </header>
+
+
+</div>
+
 <div>
     <aside>
 
@@ -191,46 +205,50 @@ To change this template use File | Settings | File Templates.
 
                 <li><a href="#">Menu<i class="fa fa-angle-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="/month/options/getstatistics">Statistika</a></li>
-                        <li><a href="/month/month/options/create">Pievienot jaunu</a></li>
+                        <li><a href="${pageContext.request.contextPath}/getstatistics">Statistika</a></li>
+                        <li><a href="/addnew">Pievienot jaunu</a></li>
                     </ul>
                 </li>
 
             </ul>
+
+
         </nav>
     </aside>
 </div>
 <br/>
+
+
 <div>
     <section>
-        <form action="" th:action="@{/options/update (id=${JobForm})}" method="post">
-            <c:forEach var="Wiev" items="${user}">
+        <form action="${pageContext.request.contextPath}/calendar/create" method="post">
             <label for="ordernum">Liguma numurs</label><br>
-            <input type="text" name="ordernum" id="ordernum" value="${Wiev.ordernum}"><br>
-            <br/>
+            <input type="text" name="ordernum" id="ordernum"><br>
+
             <label for="car"> A/M marka</label>
             <label for="car_plate" style="margin-left: 240px"> A/M numurs</label>
             <label for="car_model" style="margin-left: 100px">A/M Modelis</label>
             <label for="car_year" style="margin-left: 70px">izlaiduma gads</label> <br>
-            <input type="text" name="car" id="car" size="40" value="${Wiev.car}"/>
-            <input type="text" name="car_plate" id="car_plate" value="${Wiev.car_plate}"/>
-            <input type="text" id="car_model" name="car_model" value="${Wiev.car_model}">
-            <input type="text" id="car_year" name="car_year" value="${Wiev.car_year}">
-            <br/>
+
+
+            <input type="text" name="car" id="car" size="40"/>
+            <input type="text" name="car_plate" id="car_plate"/>
+            <input type="text" id="car_model" name="car_model">
+            <input type="text" id="car_year" name="car_year">
             <br/>
 
             <label for="client">Vards Uzvards</label>
-            <label for="phone" style="margin-left: 220px">Klienta tel.</label>
-                <br/>
+            <label for="phone" style="margin-left: 220px">Klienta tel.</label><br/>
 
-            <input id="client" type="text" name="client" size="40" value="${Wiev.client}"/>
-            <input id="phone" type="text" name="phone" size="40" value="${Wiev.phone}"/>
+            <input id="client" type="text" name="client" size="40"/>
+            <input id="phone" type="text" name="phone" size="40"/>
             <br/>
-                <br/>
-            <label for="sistem">Tekosa sistema: ${Wiev.sistem}</label>
+
+
+            <label for="sistem">Izvelejies sistemu</label>
             <label for="price" style="margin-left: 19px">Sistemas cena</label>
             <div><select id="sistem" name="sistem">
-                <option value=${Wiev.sistem}/>
+                <option/>
                 <option value="Optimum"/>
                 optimum
                 <option value="mini"/>
@@ -245,27 +263,27 @@ To change this template use File | Settings | File Templates.
                 mapon
                 <option value="igla"/>
                 igla
-                <option value="cita iekarta"/>
+                <option value="citaiekarta"/>
                 cita iekarta
 
             </select>
-                <input name="price" id="price" type="text" style="margin-left: 75px" value="${Wiev.price}"/>
+                <input name="price" id="price" type="text" style="margin-left: 15px"/>
             </div>
             <br/>
-            <div>
-                <p>Tekosais darbs <c:out value="${Wiev.work}"/></p>
-                <label for="work">Izvelejies darba veidu</label><br/>
+
+            <div><label for="work">Izvelejies darba veidu</label>
+
+                <label for="worknote" style="margin-left: 70px">Darba apraksts</label>
+                <br/>
                 <select id="work" name="work">
-                    <option value="${Wiev.work}"/>
-                    <option value="Montaz"/>
+                    <option/>
+                    <option value="Montaza"/>
                     Montāža
-                    <option value="Peremontaz"/>
-                    Pārmontāža
-                    <option value="Demontaz"/>
+                    <option value="Demontaza"/>
                     Demontāža
                     <option value="Remont"/>
                     Remonts
-                    <option value="Zamena mesta"/>
+                    <option value="Vietas maina"/>
                     Vietas maiņa
                     <option value="Downgrade"/>
                     Downgrade
@@ -279,72 +297,52 @@ To change this template use File | Settings | File Templates.
                     AKB Maiņa
                     <option value="Cita darbiba"/>
                     Cita darbība
+                </select>
+                <input name="worknote" id="worknote" style="margin-left: 100px"/>
+            </div>
+
+
+            <div><label for="manager">Kas veic ierakstu</label><br/>
+
+                <select id="manager" name="manager"> size="3" multiple="multiple"
+                    <option/>
+                    <option value="Agnese"/>
+                    Agnese
+                    <option value="Kristine"/>
+                    Kristine
+                    <option value="Inese"/>
+                    Inese
+                    <option value="Aigars"/>
+                    Aigars
                 </select></div>
+
+            <p><label for="date"> Datums </label>
+                <label for="time" style="margin-left: 140px">Laiks</label><br/>
+                <input id="date" type="date" name="workdate"/>
+                <select id="time" name="time" style="margin-left: 30px">
+                    <option></option>
+                    <option value="09:00">09:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="plus">plus</option>
+
+                </select>
+
+            </p>
+
             <br/>
 
-            <p>Tekosais manager <c:out value="${Wiev.manager}"/></p>
-            <label for="manager">Kas veic ierakstu</label><br/>
+            <label for="info" title="Papildus info"> Papildus info</label><br/>
+            <textarea id="info" cols="60" rows="6" name="info"> </textarea>
 
-            <select id="manager" name="manager">
-                <option/>
-                <option value="Agnese"/>
-                Agnese
-                <option value="Kristine"/>
-                Kristine
-                <option value="Aigars"/>
-                Aigars
-                <option value="Inese"/>
-                Inese
-            </select>
+            <p>
 
-                <br/>
+                <button class="add_button"> Pievienot</button>
 
-                <div>
-                    <p>Tekosais datums <c:out value="${Wiev.workdate}"/> laiks <c:out value="${Wiev.time}"/></p>
-                    <label for="date"> Datums </label>
-                    <label for="time" style="margin-left: 140px">Laiks</label><br/>
-                    <input id="date" type="date" name="workdate" value="${Wiev.workdate}"/>
-                    <select id="time" name="time" style="margin-left: 30px">
-                        <option></option>
-                        <option value="09:00">09:00</option>
-                        <option value="12:00">12:00</option>
-                        <option value="plus">plus</option>
+            </p>
 
-                    </select>
-                    <br/>
-                    <br/>
-
-
-                    <div><label for="action">Darba rezultats</label><br/>
-                        <select id="action" name="action">
-                            <option/>
-                            <option value="Pienemts"/>
-                            Pieņemts
-                            <option value="parrakstijas"/>
-                            parrakstijas
-                            <option value="Izpildits"/>
-                            izpildits
-                            <option value="Neatbrauca"/>
-                            Neatbrauca
-                            <option value="Nodots"/>
-                            Nodots
-                        </select></div>
-                    <br/>
-                    <p>
-                        <label for="info"></label>
-                        <textarea style="left: 210px" id="info" cols="60" rows="6" name="info"> <c:out
-                                value="${Wiev.info}"/> </textarea>
-                    </p>
-
-
-                    <button class="add_button"> Pievienot</button>
-</div>
-
-
-
-    </c:forEach>
-    </form>
+        </form>
     </section>
 </div>
+
 </body>
 </html>

@@ -42,19 +42,24 @@ public class SiteController {
         return new ModelAndView("guessNum/result");
     }
 
-    @RequestMapping(value = "/add-new")
+    @RequestMapping(value = "/addnew")
     public ModelAndView addNew() {
-        return new ModelAndView("calendar/add-new");
+        return new ModelAndView("calendar/addnew");
     }
 
-    @RequestMapping(value = "/added")
+    @RequestMapping(value = "/create")
     public ModelAndView added() {
-        return new ModelAndView("calendar/added");
+        return new ModelAndView("calendar/create");
     }
 
 
     @RequestMapping(value = "/edit")
     public ModelAndView edit() {
         return new ModelAndView("calendar/edit");
+    }
+
+    @RequestMapping(value = "/month")
+    public ModelAndView month() {
+        return new ModelAndView("calendar/month");
     }
 }

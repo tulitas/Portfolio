@@ -146,7 +146,7 @@
         }
 
         .bord {
-            border: 1px solid black
+             border: 1px solid black
         }
     </style>
     <title>${month}</title>
@@ -154,9 +154,10 @@
 </head>
 <body>
 
-<h1 class="pink">Sherlog Calendar</h1>
+<h1 class="pink">Calendar</h1>
 
-<button class="five"> <a href="${pageContext.request.contextPath}/add-new">Add New</a></button>
+<button class="five"> <a href="${pageContext.request.contextPath}/addnew">Add New</a></button>
+<button class="five"> <a href="${pageContext.request.contextPath}/getstatistics">stat</a></button>
 <div class="month">
     <ul>
         <li class="prev"><a href="${previousMonth}">❮</a></li>
@@ -185,7 +186,7 @@
                     <p style="color: #3e8e41">${day.additionalInformation}</p>
 
                     <a class="dayHref"
-                       href="${pageContext.request.contextPath}/options?workDate=${day.href}">${day.dayNumber}</a>
+                       href="${pageContext.request.contextPath}options?workDate=${day.href}">${day.dayNumber}</a>
                 </div>
             </c:if>
         </li>
