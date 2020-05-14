@@ -90,7 +90,7 @@
     <li><a href="${pageContext.request.contextPath}palindrom">Palindrom</a></li>
     <li><a href="${pageContext.request.contextPath}/askPlayer">Guess Num</a></li>
     <li><a href="${pageContext.request.contextPath}/calendar/month">Calendar</a></li>
-    <li><a href="#">xxx</a></li>
+    <li><a href="${pageContext.request.contextPath}premiumCalculator">Premium Calculator</a></li>
     <li><a href="#">ccc</a></li>
 </ul>
 

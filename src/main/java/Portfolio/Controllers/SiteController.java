@@ -62,4 +62,9 @@ public class SiteController {
     public ModelAndView month() {
         return new ModelAndView("calendar/month");
     }
+    @RequestMapping(value = "/premiumCalculator")
+    public ModelAndView premiumCalculator() {
+        return new ModelAndView("premiumCalculator/premiumCalculator");
+    }
+
 }

@@ -283,7 +283,7 @@ To change this template use File | Settings | File Templates.
 
             <li><a href="#">Menu<i class="fa fa-angle-down"></i></a>
                 <ul class="submenu">
-                    <li><a class="menu" href="${pageContext.request.contextPath}getstatistics">Statistika</a></li>
+                    <li><a class="menu" href="${pageContext.request.contextPath}/getstatistics">Statistika</a></li>
                     <li><a class="menu" href="/addnew">Pievienot jaunu</a></li>
                 </ul>
             </li>

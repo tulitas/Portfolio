@@ -68,7 +68,7 @@ public class OptionsController {
 
     @RequestMapping(value = "/getstatistics")
     public String getStatistics(Model model, String date2) {
-
+        System.out.println("123");
         String stat = jobformService.getStatistics(date2);
         String remont = jobformService.getRemont(date2);
         String snjatie = jobformService.getSnjatie(date2);

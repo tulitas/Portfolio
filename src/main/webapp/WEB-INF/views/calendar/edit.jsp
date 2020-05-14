@@ -191,8 +191,8 @@ To change this template use File | Settings | File Templates.
 
                 <li><a href="#">Menu<i class="fa fa-angle-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="/month/options/getstatistics">Statistika</a></li>
-                        <li><a href="/month/month/options/create">Pievienot jaunu</a></li>
+                        <li><a href="/getstatistics">Statistika</a></li>
+                        <li><a href="/addnew">Pievienot jaunu</a></li>
                     </ul>
                 </li>
 

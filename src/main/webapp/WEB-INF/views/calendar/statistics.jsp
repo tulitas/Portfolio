@@ -184,15 +184,15 @@ To change this template use File | Settings | File Templates.
 
                 <li><a href="#">Menu<i class="fa fa-angle-down"></i></a>
                     <ul class="submenu">
-                        <li><a href="${pageContext.request.contextPath}getstatistics">Statistika</a></li>
-                        <li><a href="${pageContext.request.contextPath}addnew">Pievienot jaunu</a></li>
+                        <li><a href="${pageContext.request.contextPath}/getstatistics">Statistika</a></li>
+                        <li><a href="${pageContext.request.contextPath}/addnew">Pievienot jaunu</a></li>
                     </ul>
                 </li>
 
             </ul>
         </nav>
         <div id="choosedate">
-            <form action="${pageContext.request.contextPath}getstatistics">
+            <form action="${pageContext.request.contextPath}/getstatistics">
                 <p>
                     <label for="date"> Выберите месяц: </label><br/>
                     <input id="date" type="month" name="date2"/>

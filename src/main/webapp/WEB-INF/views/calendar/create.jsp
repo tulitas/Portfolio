@@ -255,7 +255,7 @@
 
             <li><a href="#">Menu<i class="fa fa-angle-down"></i></a>
                 <ul class="submenu">
-                    <li><a class="menu" href="/getstatistics">Statistika</a></li>
+                    <li><a class="menu" href="getstatistics">Statistika</a></li>
                     <li><a class="menu" href="/calendar/addnew">Pievienot jaunu</a></li>
                 </ul>
             </li>
@@ -279,7 +279,7 @@
                 <th>Info</th>
                 <th>Action</th>
             </tr>
-            <c:forEach var="jobForm" items="${optionList}">
+            <c:forEach var="jobForm" items="${optionsList}">
 
                 <tr>
                     <td width=auto><b>${jobForm.workdate}</b><br><b>${jobForm.time}</b></td>
