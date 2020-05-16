@@ -7,15 +7,36 @@ public class PolicySubObjects {
 
     }
 
-    public PolicySubObjects(String subObjectName, double insuredSum, RiskType riskType) {
+    public PolicySubObjects(String subObjectName, double insuredSum, RiskType riskType,
+                            double insuredSumWater, double insuredSumFire) {
         this.subObjectName = subObjectName;
         this.insuredSum = insuredSum;
         this.riskType = riskType;
+        this.insuredSumFire = insuredSumFire;
+        this.insuredSumWater = insuredSumWater;
     }
 
     private String subObjectName;
     private double insuredSum;
     private RiskType riskType;
+    private double insuredSumFire;
+    private double insuredSumWater;
+
+    public double getInsuredSumFire() {
+        return insuredSumFire;
+    }
+
+    public void setInsuredSumFire(double insuredSumFire) {
+        this.insuredSumFire = insuredSumFire;
+    }
+
+    public double getInsuredSumWater() {
+        return insuredSumWater;
+    }
+
+    public void setInsuredSumWater(double insuredSumWater) {
+        this.insuredSumWater = insuredSumWater;
+    }
 
     public String getSubObjectName() {
         return subObjectName;

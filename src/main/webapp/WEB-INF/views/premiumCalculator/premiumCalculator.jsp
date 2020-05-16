@@ -111,9 +111,9 @@
 
         .input1 {
             background-color: #cccccc;
-            height: 40px;
+            height: 20px;
             width: 250px;
-            font-size: 36px;
+            font-size: 19px;
             border-radius: 10px;
         }
 
@@ -134,9 +134,14 @@
 </article>
 <section>
     <form action="${pageContext.request.contextPath}premiumCalculator" method="post">
-        <label for="sum">enter sum </label><textarea class="input1" id="sum" name="sum"></textarea>
-    <button class="button1"></button>
-    <br>
+        <label for="sumWater">enter sum water</label>
+        <textarea class="input1" id="sumWater" name="sumWater"></textarea>
+
+        <label for="sumFire">enter sum fire</label>
+        <textarea class="input1" name="sumFire" id="sumFire"></textarea>
+
+        <button class="button1"></button>
+        <br>
     </form>
 
 </section>

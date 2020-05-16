@@ -4,7 +4,7 @@ import Portfolio.Applications.PremiumCalculator.PolicySubObjects.PolicySubObject
 
 import java.util.List;
 
-public class PolicyOject {
+public class PolicyObject {
     private String objectName;
     private List<PolicySubObjects> policySubObjects;
 

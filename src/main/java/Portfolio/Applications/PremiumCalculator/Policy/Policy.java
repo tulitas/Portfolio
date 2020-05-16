@@ -1,7 +1,7 @@
 package Portfolio.Applications.PremiumCalculator.Policy;
 
 import Portfolio.Applications.PremiumCalculator.Enums.PolicyStatus;
-import Portfolio.Applications.PremiumCalculator.PolicyObjects.PolicyOject;
+import Portfolio.Applications.PremiumCalculator.PolicyObjects.PolicyObject;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class Policy {
 
     }
 
-    public Policy(String policyNumber, PolicyStatus policyStatus, List<PolicyOject> policyOjects, Double premium) {
+    public Policy(String policyNumber, PolicyStatus policyStatus, List<PolicyObject> policyOjects, Double premium) {
         this.policyNumber = policyNumber;
         this.policyStatus = policyStatus;
         this.policyObjects = policyOjects;
