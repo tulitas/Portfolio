@@ -21,6 +21,7 @@ public class DotComBust {
         dotComsList.add(tree);
         System.out.println("Your mission is drop to down 3 sites: ");
         System.out.println("Yohoho.com, Gulugulu.com, Up33.net");
+        System.out.println("Play desk is 7x7" + "\n" + "horizontal places is (a,b,c,d,e,f,g)" + "\n" + "vertical is (1,2,3,4,5,6,7)");
 
         for (DotCom dotComToSet : dotComsList) {
             ArrayList<String> newLocation = helper.placeDotCom(3);
