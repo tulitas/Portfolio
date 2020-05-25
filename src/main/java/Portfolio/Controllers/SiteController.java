@@ -67,4 +67,6 @@ public class SiteController {
         return new ModelAndView("premiumCalculator/premiumCalculator");
     }
 
+
+
 }

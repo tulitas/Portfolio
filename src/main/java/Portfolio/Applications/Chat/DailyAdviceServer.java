@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class DailyAdviceServer {
+class DailyAdviceServer {
 
     String[] adviceList = {"Eat less", "Buy jeens", "Go walk", "Huston, we have a problem", "To be or not to be"};
 
