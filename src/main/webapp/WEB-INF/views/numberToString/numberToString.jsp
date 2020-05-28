@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: SergejK
@@ -57,8 +58,9 @@
                 height: auto;
             }
         }
+
         .text {
-        position: relative;
+            position: relative;
             top: 40px;
             left: 50px;
             background-color: rgba(49, 99, 49, 0.57);
@@ -69,6 +71,7 @@
             font-size: 25px;
             color: #75ff87;
         }
+
         .button1 {
             /*position: relative;*/
             /*left: 150px;*/
@@ -89,15 +92,17 @@
 <section>
     <nav>
         <ul>
-            <li><a href="#">London</a></li>
-            <li><a href="#">Paris</a></li>
-            <a href="#">Tokyo</a>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <a href="#"></a>
         </ul>
     </nav>
     <article>
-        <label for="num">Enter digits</label><br>
-        <input class="text" id="num" pattern="{0-99}" title="only numbers"/>
-        <button class="button1">zzz</button>
+        <form action="${pageContext.request.contextPath}/numberConvert" method="post">
+            <label for="num">Enter digits</label><br>
+            <input class="text" id="num" name="num" pattern="{0-99}" title="only numbers"/>
+            <input type="submit" value="Submit" class="button">
+        </form>
     </article>
 </section>
 

@@ -92,7 +92,7 @@
     <li><a href="${pageContext.request.contextPath}/calendar/month">Calendar</a></li>
     <li><a href="${pageContext.request.contextPath}premiumCalculator">Premium Calculator</a></li>
     <li><a href="${pageContext.request.contextPath}/dotCom">Dot Com Bust (console)</a></li>
-    <li><a href="${pageContext.request.contextPath}numberToString">Num to string</a></li>
+    <li><a href="${pageContext.request.contextPath}/numberToString">Num to string</a></li>
 </ul>
 
 </body>

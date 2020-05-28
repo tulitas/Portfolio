@@ -1,16 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
   User: SergejK
-  Date: 22-May-20
-  Time: 10:53 PM
+  Date: 28-May-20
+  Time: 11:04 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Connection</title>
+    <title>Result</title>
 </head>
 <body>
-zx
+
 </body>
 </html>
