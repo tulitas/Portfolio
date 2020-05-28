@@ -13,10 +13,10 @@ public class NumbersTransformer {
         if (getNumFromWeb() < 20) {
             System.out.println(belowTwenty[getNumFromWeb()]);
         } else if (getNumFromWeb() < 100) {
-            int hight = getNumForWeb() / 10;
-            System.out.println("hight " + hight + getNumFromWeb());
+            int hight = getNumFromWeb() / 10;
+            System.out.println("hight " + hight);
             int low = getNumFromWeb() % 10;
-            System.out.println("low" + low);
+            System.out.println("low " + low);
             String text = tens[hight];
             if (low != 0) {
                 text = text + " " + belowTwenty[low];
