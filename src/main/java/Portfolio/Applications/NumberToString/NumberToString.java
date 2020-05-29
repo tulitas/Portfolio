@@ -29,8 +29,8 @@ public class NumberToString {
         numbersTransformer.setNumFromWeb(num);
         numbersTransformer.transfer();
         String numString = numbersTransformer.getText();
+        System.out.println(numString);
         model.addAttribute("numString", numString);
-        System.out.println(numbersTransformer.getText());
         return "numberToString/result";
     }
 }

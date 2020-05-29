@@ -12,7 +12,7 @@ public class NumbersTransformer {
 
     void transfer() {
         if (getNumFromWeb() < 20) {
-            System.out.println(belowTwenty[getNumFromWeb()]);
+//            System.out.println(belowTwenty[getNumFromWeb()]);
         } else if (getNumFromWeb() < 100) {
             int hight = getNumFromWeb() / 10;
             int low = getNumFromWeb() % 10;
@@ -21,7 +21,8 @@ public class NumbersTransformer {
                 text = text + " " + belowTwenty[low];
                 setText(text);
 //                System.out.println(text);
-            } else System.out.println(tens[0]);
+            } else
+                System.out.println(tens[0]);
         }
     }
 
