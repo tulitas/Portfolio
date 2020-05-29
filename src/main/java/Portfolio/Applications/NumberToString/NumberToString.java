@@ -1,6 +1,7 @@
 package Portfolio.Applications.NumberToString;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -20,14 +21,16 @@ public class NumberToString {
     }
 
     @RequestMapping(value = "numberConvert", method = RequestMethod.POST)
-    public String convrtNum(Integer num) {
+    public String convrtNum(Integer num, Model model) {
         NumbersTransformer numbersTransformer = new NumbersTransformer();
         if (num < 0 || num > 100) {
             System.out.println("error");
         }
         numbersTransformer.setNumFromWeb(num);
         numbersTransformer.transfer();
-
+        String numString = numbersTransformer.getText();
+        model.addAttribute("numString", numString);
+        System.out.println(numbersTransformer.getText());
         return "numberToString/result";
     }
 }

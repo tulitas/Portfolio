@@ -3,10 +3,11 @@ package Portfolio.Applications.NumberToString;
 public class NumbersTransformer {
     private int numFromWeb;
     private int numForWeb;
-    public static final String[] belowTwenty = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
+    private String text;
+    private static final String[] belowTwenty = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
             "nine", "ten",
             "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
-    public static final String[] tens = {"hundred", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy",
+    private static final String[] tens = {"hundred", "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy",
             "eighty", "ninety"};
 
     void transfer() {
@@ -14,13 +15,12 @@ public class NumbersTransformer {
             System.out.println(belowTwenty[getNumFromWeb()]);
         } else if (getNumFromWeb() < 100) {
             int hight = getNumFromWeb() / 10;
-            System.out.println("hight " + hight);
             int low = getNumFromWeb() % 10;
-            System.out.println("low " + low);
-            String text = tens[hight];
+            text = tens[hight];
             if (low != 0) {
                 text = text + " " + belowTwenty[low];
-                System.out.println(text);
+                setText(text);
+//                System.out.println(text);
             } else System.out.println(tens[0]);
         }
     }
@@ -39,5 +39,13 @@ public class NumbersTransformer {
 
     void setNumFromWeb(int numFromWeb) {
         this.numFromWeb = numFromWeb;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }
