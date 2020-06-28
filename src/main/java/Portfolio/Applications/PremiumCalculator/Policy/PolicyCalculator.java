@@ -41,7 +41,7 @@ public class PolicyCalculator {
         return 0.013;
     }
 
-    static double getWaterCoefficient(Double sumInsuredWater) {
+    private static double getWaterCoefficient(Double sumInsuredWater) {
         if (sumInsuredWater >= 10) {
             return 0.05;
         }
